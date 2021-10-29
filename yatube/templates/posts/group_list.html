@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
-{% block title %}Записи сообщества {{ slug }}{% endblock %}
+{% block title %}Записи сообщества {{ group.title }}{% endblock %}
 {% block content %}
-<h1>Лев Толстой - зеркало русской революции.</h1>
-<p>{{ group_text }}</p>
+<h1>{{ group.title }}</h1>
+<p>{{ group.description }}</p>
 {% for post in posts %}
   <ul>
     <li>
