@@ -5,15 +5,7 @@
 <p>{{ group.description }}</p>
 {% for post in posts %}
 <article>
-  <ul>
-    <li>
-      Автор: {{ post.author.get_full_name }}
-    </li>
-    <li>
-      Дата публикации: {{ post.pub_date|date:"d E Y" }}
-    </li>
-  </ul>
-  <p>{{ post.text }}</p>
+ {% include 'includes/card.html' %}
 </article>
 {% if not forloop.last %}<hr>{% endif %}
 {% endfor %}
