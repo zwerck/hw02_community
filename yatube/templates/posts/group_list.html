@@ -4,6 +4,7 @@
 <h1>{{ group.title }}</h1>
 <p>{{ group.description }}</p>
 {% for post in posts %}
+<article>
   <ul>
     <li>
       Автор: {{ post.author.get_full_name }}
@@ -13,6 +14,7 @@
     </li>
   </ul>
   <p>{{ post.text }}</p>
-  {% if not forloop.last %}<hr>{% endif %}
+</article>
+{% if not forloop.last %}<hr>{% endif %}
 {% endfor %}
 {% endblock %}
