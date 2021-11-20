@@ -7,8 +7,8 @@
       Дата публикации: {{ post.pub_date|date:"d E Y" }}
     </li>
   </ul>
-<p>{{ post.text }}</p>
-{% if show_group and post.group %}
-  <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
-{% endif %}
+  <p>{{ post.text }}</p>
+  {% if show_group and post.group %}
+    <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
+  {% endif %}
 </article>
